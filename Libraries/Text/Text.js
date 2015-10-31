@@ -31,6 +31,7 @@ var viewConfig = {
     isHighlighted: true,
     numberOfLines: true,
     allowFontScaling: true,
+    includeFontPadding: true,
   }),
   uiViewClassName: 'RCTText',
 };
@@ -104,6 +105,13 @@ var Text = React.createClass({
      * Specifies should fonts scale to respect Text Size accessibility setting on iOS.
      */
     allowFontScaling: React.PropTypes.bool,
+    /**
+     * Can be used to disable the extra padding that Android leaves in TextViews.
+     * Android includes the padding by default.
+     *
+     * See: http://developer.android.com/reference/android/widget/TextView.html#attr_android:includeFontPadding
+     */
+    includeFontPadding: React.PropTypes.bool,
   },
 
   viewConfig: viewConfig,

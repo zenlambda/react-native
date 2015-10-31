@@ -51,6 +51,11 @@ public class ReactTextViewManager extends BaseViewManager<ReactTextView, ReactTe
     return new ReactTextView(context);
   }
 
+  @ReactProp(name = ViewProps.INCLUDE_FONT_PADDING)
+  public void setIncludeFontPadding(ReactTextView view, boolean include) {
+    view.setIncludeFontPadding(include);
+  }
+
   // maxLines can only be set in master view (block), doesn't really make sense to set in a span
   @ReactProp(name = ViewProps.NUMBER_OF_LINES, defaultInt = ViewDefaults.NUMBER_OF_LINES)
   public void setNumberOfLines(ReactTextView view, int numberOfLines) {
